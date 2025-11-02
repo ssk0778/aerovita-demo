@@ -2,33 +2,32 @@
 
 This repository contains a small React + Vite landing page demo adapted from your provided components. It includes a Tailwind CSS setup and a responsive UI.
 
-What this repo contains
+What this repo contains:
 - Source code in `src/` (components, styles)
-- Vite dev server and build (`npm run dev`, `npm run build`)
+- Vite dev server and build commands (`npm run dev`, `npm run build`)
 - Tailwind CSS build configured via `postcss.config.cjs` and `tailwind.config.cjs`
 - A GitHub Actions workflow to build and deploy to GitHub Pages automatically when you push to the default branch
 
 Quick local setup
 
-1. Install dependencies (PowerShell):
+1. Install dependencies (cross-platform):
 
-```powershell
-cd /d D:\buildathon
-npm.cmd install
+```
+npm install
 ```
 
 2. Start dev server:
 
-```powershell
-npm.cmd run dev
+```
+npm run dev
 ```
 
 Open the URL shown in the terminal (e.g. http://localhost:5173 or another port Vite chooses).
 
 Production build
 
-```powershell
-npm.cmd run build
+```
+npm run build
 ```
 
 The build artifacts will be output to `dist/`.
@@ -54,13 +53,12 @@ Security note: Firebase client config is safe to include in frontend code — it
 Deploy to GitHub (automatic via Actions)
 
 1. Create a new repository on GitHub (use the website or `gh repo create`).
-2. Add the remote and push your code (example PowerShell commands below).
+2. Add the remote and push your code (example commands below).
 3. When you push to the default branch (usually `main`), the GitHub Actions workflow will run, build the site, and deploy to GitHub Pages.
 
-PowerShell commands to push (replace `<GITHUB-URL>` with the repo URL):
+Commands to push (replace `<GITHUB-URL>` with the repo URL):
 
-```powershell
-cd /d D:\buildathon
+```
 git init
 git add .
 git commit -m "Initial commit: AEROVITA demo"
@@ -72,6 +70,7 @@ git push -u origin main
 After the push, open the Actions tab in your GitHub repo to watch the `deploy.yml` workflow. When it completes, your site will be published to GitHub Pages. GitHub may take a minute or two to provision the Pages site.
 
 Notes & troubleshooting
+
 - If the workflow fails, open the run log in Actions to see build errors. Common issues are missing dependencies or syntax errors.
 - If you want a custom domain, add a `CNAME` file and configure DNS in GitHub Pages settings.
 
